@@ -1,0 +1,11 @@
+
+language: cpp
+
+branches:
+  only:
+    - master
+    - Test
+    
+compiler:
+  - g++
+  - gcc
