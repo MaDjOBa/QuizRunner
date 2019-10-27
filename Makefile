@@ -88,3 +88,20 @@ Math.o: $(MMDir)Math.cpp
 	$(CC)  
 
 
+test: Testing
+
+Testing: App/test/main.o App/test/funcAnswer.o App/test/ctestRfunc.o
+	gcc $(FLAG) App/test/main.o App/test/funcAnswer.o App/test/ctestRfunc.o -o $@
+
+App/test/main.o: App/test/main.c App/thirdparty/ctest.h
+	gcc $(FLAG) -I App/thirdparty -c App/test/main.c -o $@
+
+App/test/funcAnswer.o: App/test/funcAnswer.c App/test/funcAnswer.h
+	gcc $(FLAG) -c App/test/funcAnswer.c -o $@
+
+App/test/ctestRfunc.o: App/test/ctestRfunc.c App/test/ctestRfunc.h
+	gcc $(FLAG) -c App/test/ctestRfunc.c -o $@
+
+clean:
+	rm -rf $(MenuDir)*.o $(RQDir)*.o $(MQDir)*.o $(RMDir)*.o $(MMDir)*.o App/test/*.o
+	
