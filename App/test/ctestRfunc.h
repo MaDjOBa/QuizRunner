@@ -1,0 +1,1 @@
+int RfuncAnswer(char answer, char a, char b);
