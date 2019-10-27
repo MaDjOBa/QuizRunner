@@ -1,11 +1,11 @@
-
 language: cpp
 
-branches:
-  only:
-    - master
-    - Test
-    
+script:
+- choco install chocolatey
+- choco install make
+- git ls-files src/ | xargs clang-format -i && git diff —exit-code
+- make
+
 compiler:
-  - g++
-  - gcc
+- g++
+- gcc
