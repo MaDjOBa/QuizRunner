@@ -1,3 +1,4 @@
+make=
 CC=g++
 FLAG = -Wall -Werror -std=c99
 MDir=App/Menu/
