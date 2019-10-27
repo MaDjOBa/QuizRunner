@@ -14,13 +14,13 @@ void Back()
         {
         	if(num=='1')
         	{
-        		system("cls");
+        		
         		x=main();
         		break;
 			}
 			else
 			{
-				system("cls");
+				
 				cout<<endl<<"Spasibo za prohozhdenie testa!"<<endl;
 				break;
 			}
