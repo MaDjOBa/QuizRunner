@@ -1,8 +1,6 @@
 language: cpp
 
 script:
-- choco install chocolatey
-- choco install make
 - make
 
 compiler:
